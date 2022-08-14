@@ -1,13 +1,13 @@
 # MaybePay
 
-*Blockchain micropayments with no minimum size*
+_Blockchain micropayments with no minimum size_
 
 [![Demo video](./assets/video-icon.png)](https://www.youtube.com/watch?v=flhXOMp9hWI)
 
 ## Run the Frontend
 
-MaybePay is just on the polygon testnet for now and has hardcoded values
-allowing you to run the frontend without any additional setup.
+MaybePay is on the polygon testnet for now and uses hardcoded values
+to make testing the frontend smoother for hackathon purposes.
 
 1. Follow the instructions at [/frontend/README.md](./frontend/README.md)
 
@@ -27,7 +27,7 @@ Server:
 
 Client:
   request /resource
-  + payment (signed message - nothing on-chain yet):
+  + payment (offchain signed message):
     if (preimage(0xced8e9) + 0x2f4ac2 < 0x000d1b) {
       pay server $5.00
     }
@@ -37,7 +37,7 @@ Server:
 
 Server:
   1/5000 chance:
-    Submit tx on chain, redeeming $5.00 compensation
+    Submit tx onchain, redeeming $5.00 compensation
   4999/5000 chance:
     No actual compensation, but satisfied by the chance of being
     paid, and honours the request to maintain reputation and
