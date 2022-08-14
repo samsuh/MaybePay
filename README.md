@@ -37,7 +37,7 @@ Server:
 
 Server:
   1/5000 chance:
-    Submit tx onchain, redeeming $5.00 compensation
+    Submit tx onchain, redeeming offchain signed message for $5.00 compensation
   4999/5000 chance:
     No actual compensation, but satisfied by the chance of being
     paid, and honours the request to maintain reputation and
